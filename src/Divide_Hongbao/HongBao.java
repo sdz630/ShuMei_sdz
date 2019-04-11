@@ -26,17 +26,14 @@ public class HongBao {
             perMoney =leftMoney;//如果是最后一个
         }else {
             while(true) {
-                if(leftNum/leftNum<=averageMoney){
-                    int count = new Random().nextInt(200);
-                    double percentage =count/100.0;
-                    perMoney = averageMoney*percentage;
-                    leftMoney = leftMoney - perMoney;
-                }else{
-                int count = new Random().nextInt(100);
-                double percentage =count/100.0;
-                perMoney = averageMoney*percentage;
-                leftMoney = leftMoney - perMoney;}
-                if(leftMoney/(leftNum-1)>=0.01&&perMoney>0)break;
+                int count;
+                if (leftNum / leftNum <= averageMoney)
+                    count = new Random().nextInt(200);
+                count = new Random().nextInt(100);
+                double percentage = count / 100.0;
+                perMoney = averageMoney * percentage;
+                leftMoney = leftMoney - perMoney;
+                if (leftMoney / (leftNum - 1) >= 0.01 && perMoney > 0) break;
             }
         }
         leftNum--;
