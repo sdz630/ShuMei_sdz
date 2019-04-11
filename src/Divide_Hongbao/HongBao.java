@@ -6,14 +6,14 @@ import java.util.Random;
 public class HongBao {
     private double leftMoney;
     private int leftNum;
-    private double avaeageMoney;
+    private double averageMoney;
     private int money;
     private int num;
 
     public HongBao(double Money, int num) {
         this.leftMoney = Money;
         this.leftNum = num;
-        this.avaeageMoney = Money/leftNum;
+        this.averageMoney = Money/leftNum;
         this.num=num;
         this.money=money;
     }
@@ -26,15 +26,15 @@ public class HongBao {
             perMoney =leftMoney;//如果是最后一个
         }else {
             while(true) {
-                if(leftNum/leftNum<=avaeageMoney){
+                if(leftNum/leftNum<=averageMoney){
                     int count = new Random().nextInt(200);
                     double percentage =count/100.0;
-                    perMoney = avaeageMoney*percentage;
+                    perMoney = averageMoney*percentage;
                     leftMoney = leftMoney - perMoney;
                 }else{
                 int count = new Random().nextInt(100);
                 double percentage =count/100.0;
-                perMoney = avaeageMoney*percentage;
+                perMoney = averageMoney*percentage;
                 leftMoney = leftMoney - perMoney;}
                 if(leftMoney/(leftNum-1)>=0.01&&perMoney>0)break;
             }
