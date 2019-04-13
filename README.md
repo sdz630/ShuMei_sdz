@@ -22,6 +22,6 @@ new了多个线程并将其start,但是运行的时候只有一个线程在调�
 ### git
 会使用git的基本操作
 ### android
-简单的试运行了一下helloword 还在努力中....
+简单的试运行了一下helloword,对android studio的目录结构有所了解 还在努力中....
 
 
