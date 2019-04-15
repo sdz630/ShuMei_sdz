@@ -26,10 +26,17 @@ public class HongBao {
             perMoney =leftMoney;//如果是最后一个
         }else {
             while(true) {
+                try{
+                    Thread.sleep(1000);
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
                 int count;
-                if (leftNum / leftNum <= averageMoney)
-                    count = new Random().nextInt(200);
-                count = new Random().nextInt(100);
+                if (leftMoney/ leftNum >= averageMoney){
+                    count = new Random().nextInt(300);
+                }else {
+                    count = new Random().nextInt(100);
+                }
                 double percentage = count / 100.0;
                 perMoney = averageMoney * percentage;
                 leftMoney = leftMoney - perMoney;
